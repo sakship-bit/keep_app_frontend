@@ -11,7 +11,7 @@ const Header=()=>{
     return(<>
     <Navbar bg="light" expand="lg" >
       <Container fluid>
-        <Navbar.Brand href="#"><div className='row col-12'><div className='parent'  style={{display:'flex'}}><span className="material-icons mt-1 ">home</span>&nbsp;&nbsp;Keep Notes</div></div></Navbar.Brand>
+        <Navbar.Brand href="/"><div className='row col-12'><div className='parent'  style={{display:'flex'}}><span className="material-icons mt-1 ">home</span>&nbsp;&nbsp;Keep Notes</div></div></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -19,7 +19,7 @@ const Header=()=>{
             style={{ maxHeight: '300px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1" className='ms-5'>About</Nav.Link>
+            <Nav.Link href="/about" className='ms-5'>About</Nav.Link>
             {/* <Nav.Link href="#action2">About</Nav.Link>
             <NavDropdown title="More" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
