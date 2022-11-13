@@ -5,6 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: url('https://img.freepik.com/free-photo/blank-spiral-notepad-pen-coffee-cup-eyeglasses-pushpins-white-background_23-2147916448.jpg?size=626&ext=jpg&ga=GA1.2.1634518924.1668298657') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 code {
