@@ -12,7 +12,7 @@ const AboutPage=()=>{
            <h3 className='m-4 text-center'>Welcome!</h3>
 
             <h4 className='m-4 text-center'>This is a Notes Web App </h4>
-            <h5 className='m-5 text-center'>Store your ideas, reminders here and you can keep them in separate collections as per your wish</h5>
+            <h5 className='m-5 text-center'>Store your ideas, reminders here and you can keep them in separate collections too</h5>
             <p className='m-5 text-center'>Full version coming soon......</p>
         </div>
         
