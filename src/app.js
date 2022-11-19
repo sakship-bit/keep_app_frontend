@@ -13,8 +13,8 @@ const App=()=>{
         <Route path="/notespage/*" element={<NotesPage/>}/>
       </Routes> );
     return(<>
-        <div className='homepage'>
-        <div className="row col-12 col-lg-12 m-0 page">
+        <div className='homepage' style={{height:"100%"}}>
+        <div className="row col-12 col-lg-12 m-0">
             <Header/>
             
         </div>
