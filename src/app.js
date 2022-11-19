@@ -18,9 +18,9 @@ const App=()=>{
             <Header/>
             
         </div>
-        <div className='row col-lg-4 col-sm-6 col-12'>
+        
             {routes}
-        </div>
+        
         </div>
 
     </>);
