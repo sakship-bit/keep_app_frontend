@@ -2,7 +2,7 @@ import React, { Component,useRef,useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../basic/back.css";
 import {data} from "../../data.js";
-
+import "./collectionpage.css"
 
 const CollectionPage = () => {
     const [add,setAdd]=useState(false);
@@ -27,7 +27,7 @@ const CollectionPage = () => {
   return (
     <>
       <div className="container-fluid">
-        <div className="row d-flex justify-content-center mt-4">
+        <div className="row d-flex  justify-content-center mt-4">
          
           <div class="collapse"  className="col-lg-5 col-12">
             <form className="container-fluid" onSubmit={submitHandler}>
@@ -45,7 +45,7 @@ const CollectionPage = () => {
           </div>
         </div>
 
-        <div className="row d-flex justify-content-between">
+        <div className="row d-flex collection">
           {noteData &&
             noteData.map((item, index) => {
               return (
