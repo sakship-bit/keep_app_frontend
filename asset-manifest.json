@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/keep_app_frontend/static/css/main.131484f5.css",
-    "main.js": "/keep_app_frontend/static/js/main.20a51d5b.js",
+    "main.js": "/keep_app_frontend/static/js/main.be2ae49f.js",
     "static/media/material-icons-two-tone.woff": "/keep_app_frontend/static/media/material-icons-two-tone.3baa5b8f3469222b822d.woff",
     "static/media/material-icons-two-tone.woff2": "/keep_app_frontend/static/media/material-icons-two-tone.4ef4218c522f1eb6b5b1.woff2",
     "static/media/material-icons-round.woff": "/keep_app_frontend/static/media/material-icons-round.5d681e2edae8c60630db.woff",
@@ -14,10 +14,10 @@
     "static/media/material-icons.woff2": "/keep_app_frontend/static/media/material-icons.0c35d18bf06992036b69.woff2",
     "index.html": "/keep_app_frontend/index.html",
     "main.131484f5.css.map": "/keep_app_frontend/static/css/main.131484f5.css.map",
-    "main.20a51d5b.js.map": "/keep_app_frontend/static/js/main.20a51d5b.js.map"
+    "main.be2ae49f.js.map": "/keep_app_frontend/static/js/main.be2ae49f.js.map"
   },
   "entrypoints": [
     "static/css/main.131484f5.css",
-    "static/js/main.20a51d5b.js"
+    "static/js/main.be2ae49f.js"
   ]
 }
