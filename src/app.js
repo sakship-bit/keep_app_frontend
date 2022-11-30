@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Header from './Components/Header/header';
-import './app.css'
 import { Route,Routes,Navigate } from 'react-router-dom';
 import 'datatables.net-bs5/css/dataTables.bootstrap5.min.css'
 import NotesPage from './Components/NotesPage/notespage';

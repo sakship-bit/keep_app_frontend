@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import "./newsfeed.css"
 import Allnews from './subnews/allnews'
 import Entertainment from './subnews/entertainment'
-import Business from './subnews/politics'
-import Politics from './subnews/politics'
+import Business from './subnews/business'
+
 import Sports from './subnews/sports'
 
 const NewsFeed=()=>{
