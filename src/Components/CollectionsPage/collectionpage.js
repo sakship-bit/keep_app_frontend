@@ -51,7 +51,7 @@ const CollectionPage = () => {
               return (
                 <div
                 key={index}
-                  class="card  ms-4 mt-3 me-4 col-10 col-lg-5"
+                  class="card text-box ms-4 mt-3 me-4 col-10 col-lg-5"
                   style={{ cursor: "pointer" ,backgroundColor:"#ffffcc" }}
                 >
                   <Link

@@ -9,3 +9,13 @@
     justify-content: space-between;
 }
 }
+
+.thumbs{
+    opacity: 0.1;
+    
+}
+.thumbs:hover{
+   
+    opacity: 0.7;
+
+}

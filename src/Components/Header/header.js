@@ -5,13 +5,14 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router-dom';
 import './header.css'
 const Header=()=>{
 
     return(<>
-    <Navbar bg="light" expand="lg" >
+    <Navbar bg="dark" expand="lg" >
       <Container fluid>
-        <Navbar.Brand href="/"><div className='row col-12'><div className='parent'  style={{display:'flex'}}><span className="material-icons mt-1 ">home</span>&nbsp;&nbsp;Keep Notes</div></div></Navbar.Brand>
+        <Navbar.Brand href="/"><div className='row col-12'><div className='parent'  style={{display:'flex',color:'white'}}><span className="material-icons mt-1 ">home</span>&nbsp;&nbsp;Keep Notes</div></div></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -19,7 +20,9 @@ const Header=()=>{
             style={{ maxHeight: '300px' }}
             navbarScroll
           >
-            <Nav.Link href="/about" className='ms-5'>About</Nav.Link>
+            <Link to="/about" className='ms-5 text-white text-decoration-none'>About</Link>
+            <Link to="/newsfeed" className='ms-5 text-white text-decoration-none'>News Feed</Link>
+
             {/* <Nav.Link href="#action2">About</Nav.Link>
             <NavDropdown title="More" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>

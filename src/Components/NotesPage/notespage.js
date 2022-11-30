@@ -1,4 +1,4 @@
-import React, { Component, useRef,useState } from "react";
+import React, { Component, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { data } from "../../data";
 
@@ -7,24 +7,24 @@ const NotesPage = () => {
   const location = useLocation();
   const { from, id } = location.state;
   const notes = from.noteData[id].note;
-  const [add,setAdd]=useState(false);
+  const [add, setAdd] = useState(false);
 
   const submitHandler = (e) => {
     e.preventDefault();
     setAdd(!add);
-    const notesData="notes";
+    const notesData = "notes";
     notes.push("notes");
 
   };
 
+  const time="5:00 am 22 oct"
 
-  
 
   return (
     <>
       <div className="container-fluid">
         <div className="d-flex justify-content-center mt-2">
-          <h2 className="text-center" style={{color:"white",backgroundColor:"black"}}>{from.noteData[id].collection}</h2>
+          <h2 className="text-center" style={{ color: "white", backgroundColor: "black" }}>{from.noteData[id].collection}</h2>
         </div>
         <div className="row mt-4">
           <p className="col-lg-2 ms-5 mt-2">
@@ -41,7 +41,7 @@ const NotesPage = () => {
             </button>
           </p>
           <div class="collapse" id="collapseExample" className="col-lg-4">
-           
+
           </div>
         </div>
         <div className="row d-flex justify-content-between">
@@ -50,14 +50,36 @@ const NotesPage = () => {
               return (
                 <div
                   key={index}
-                  class="form-group purple-border ms-5 mt-3 me-5 mb-2 col-10 col-lg-3"
+                  class="form-group purple-border mx-4  mb-2 col-10 col-lg-3 "
                 >
+                  {(index>2)?<div id="spacer"  style={{marginTop:"70px"}}></div>:<></>}
                   <label for="exampleFormControlTextarea5"></label>
                   <textarea
-                    class="form-control"
+                    class="form-control position-absolute "
                     id="exampleFormControlTextarea5"
                     rows="3"
+                    cols=""
+                    style={{ width: "20%",height:"110px"}}
                   ></textarea>
+                  
+                  <button className="align-right position-relative thumbs" style={{ top: "32px", left: "263px"}}><span class="material-icons">
+
+                    content_copy
+                  </span></button>
+               
+                    <div>
+                  <button className=" position-relative thumbs mt-1" style={{ top: "32px", left: "263px"}}><span class="material-icons">
+                    
+                    clear
+                  </span></button>
+                  </div>
+                  <div>
+                  <button className=" position-relative thumbs mt-1" style={{ top: "32px", left: "263px"}}><span class="material-icons">
+                    
+                    delete
+                  </span></button>
+                  </div>
+                  {/* <p className="text position-relative text-muted" style={{ top: "120px", left: "2px",fontSize:"13px"}}>Last modified : {time}</p> */}
                 </div>
               );
             })}
