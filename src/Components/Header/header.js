@@ -10,7 +10,7 @@ import './header.css'
 const Header=()=>{
 
     return(<>
-    <Navbar bg="dark" expand="lg" >
+    <Navbar bg="dark" expand="lg" style={{position:"sticky",display:"flex"}}>
       <Container fluid>
         <Navbar.Brand href="/"><div className='row col-12'><div className='parent'  style={{display:'flex',color:'white'}}><span className="material-icons mt-1 ">home</span>&nbsp;&nbsp;Keep Notes</div></div></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />

@@ -16,15 +16,15 @@ const App=()=>{
 
       </Routes> );
     return(<>
-        <div className='homepage' style={{height:"100%"}}>
-        <div className="row col-12 col-lg-12 m-0">
+     
+        <div className="row col-12 col-lg-12 m-0 ">
             <Header/>
             
         </div>
         
             {routes}
         
-        </div>
+     
 
     </>);
 }

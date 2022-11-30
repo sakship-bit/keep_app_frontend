@@ -8,7 +8,8 @@ import Sports from './subnews/sports'
 
 const NewsFeed=()=>{
  return(<>
-    <nav className='navbar-light d-flex justify-content-center align-items-center mt-2 '>
+   <div className='container'>
+    <nav className='navbar-light d-flex sticky-top bg-dark text-wrap  justify-content-center align-items-center mt-2 '>
   <div className="nav nav-tabs text-white" id="nav-tab" role="tablist">
     <button className="nav-link active ms-1 me-1" id="nav-all-tab" data-bs-toggle="tab" data-bs-target="#nav-all" type="button" role="tab" aria-controls="nav-all" aria-selected="true">All</button>
     <button className="nav-link ms-1 me-1" id="nav-sports-tab" data-bs-toggle="tab" data-bs-target="#nav-sports" type="button" role="tab" aria-controls="nav-sports" aria-selected="false">Sports</button>
@@ -23,6 +24,7 @@ const NewsFeed=()=>{
   <div className="tab-pane fade" id="nav-business" role="tabpanel" aria-labelledby="nav-business-tab"><Business/></div>
   <div className="tab-pane fade" id="nav-entertainment" role="tabpanel" aria-labelledby="nav-entertainment-tab"><Entertainment/></div>
 
+</div>
 </div>
  </>)
 
