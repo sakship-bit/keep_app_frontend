@@ -7,6 +7,8 @@ import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'material-icons'
 import './Components/basic/material-icon.css'
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
