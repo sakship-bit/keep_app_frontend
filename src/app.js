@@ -8,7 +8,7 @@ import AboutPage from './Components/About/about';
 import NewsFeed from './Components/newsfeed/newsfeed';
 const App=()=>{
     const routes=(<Routes>
-        <Route path="/" element={<CollectionPage/>}/>
+        <Route path="/*" element={<CollectionPage/>}/>
         <Route path= "/about/*" element={<AboutPage/>}/>
         <Route path="/notespage/*" element={<NotesPage/>}/>
         <Route path="/newsfeed/*" element={<NewsFeed/>}/>
