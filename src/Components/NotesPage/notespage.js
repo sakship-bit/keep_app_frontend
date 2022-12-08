@@ -52,33 +52,18 @@ const NotesPage = () => {
                   key={index}
                   class="form-group purple-border mx-4  mb-2 col-10 col-lg-3 "
                 >
-                  {(index>2)?<div id="spacer"  style={{marginTop:"70px"}}></div>:<></>}
+                
                   <label for="exampleFormControlTextarea5"></label>
                   <textarea
-                    class="form-control position-absolute "
+                    class="form-control  "
                     id="exampleFormControlTextarea5"
                     rows="3"
                     cols=""
-                    style={{ width: "20%",height:"110px"}}
+                    style={{ width: "100%",height:"110px"}}
                   ></textarea>
                   
-                  <button className="align-right position-relative thumbs" style={{ top: "32px", left: "263px"}}><span class="material-icons">
-
-                    content_copy
-                  </span></button>
+                
                
-                    <div>
-                  <button className=" position-relative thumbs mt-1" style={{ top: "32px", left: "263px"}}><span class="material-icons">
-                    
-                    clear
-                  </span></button>
-                  </div>
-                  <div>
-                  <button className=" position-relative thumbs mt-1" style={{ top: "32px", left: "263px"}}><span class="material-icons">
-                    
-                    delete
-                  </span></button>
-                  </div>
                   {/* <p className="text position-relative text-muted" style={{ top: "120px", left: "2px",fontSize:"13px"}}>Last modified : {time}</p> */}
                 </div>
               );

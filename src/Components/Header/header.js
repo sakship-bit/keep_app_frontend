@@ -36,15 +36,7 @@ const Header=()=>{
             </NavDropdown> */}
             
           </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search notes"
-              className="me-5"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
+          
         </Navbar.Collapse>
       </Container>
     </Navbar>
