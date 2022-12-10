@@ -4,9 +4,12 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+
 import { Link } from 'react-router-dom';
+
 import './header.css'
+
+
 const Header=()=>{
 
     return(<>
@@ -36,7 +39,10 @@ const Header=()=>{
             </NavDropdown> */}
             
           </Nav>
-          
+          <Form className="d-flex">
+          <Link to="/login" className='ms-5 text-white text-decoration-none'>Login</Link>
+            <Link to="/signup" className='ms-5 text-white text-decoration-none'>Signup</Link>
+          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
