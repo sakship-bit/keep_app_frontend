@@ -10,6 +10,7 @@ import Login from './Components/Login/login';
 import Signup from './Components/Login/signup';
 
 
+
 const App=()=>{
     const routes=(<Routes>
         <Route path="/*" element={<CollectionPage/>}/>
@@ -32,7 +33,6 @@ const App=()=>{
             {routes}
         
      
-
     </>);
 }
 

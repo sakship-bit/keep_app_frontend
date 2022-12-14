@@ -1,13 +1,19 @@
-import React, { Component,useRef,useState,useEffect } from "react";
+import React, { Component,useRef,useState,useEffect,useContext } from "react";
 import { Link } from "react-router-dom";
 import "../basic/back.css";
-import {data} from "../../data.js";
 import "./collectionpage.css"
+import NoteContext from "../../context/notecontext";
 
 const CollectionPage = () => {
     const [add,setAdd]=useState(false);
   const collectionNameInput=useRef();
-  const [noteData,setnoteData]=useState(data);
+  // const [noteData,setnoteData]=useState(data);
+
+  const allData=useContext(NoteContext);
+
+
+
+  const [noteData,setCollectionData]=useState(allData.collectionData)
   const submitHandler = (e) => {
     e.preventDefault();
     setAdd(!add);
@@ -20,7 +26,7 @@ const CollectionPage = () => {
  
   useEffect(()=>{
   
-    console.log("added")
+    
   },[add]);
 
   
@@ -38,6 +44,7 @@ const CollectionPage = () => {
                   id="floatingInput"
                   placeholder="name@example.com"
                   ref={collectionNameInput}
+                  required
                 ></input>
                 <label for="floatingInput">Add a new Collection</label>
               </div>
@@ -46,13 +53,13 @@ const CollectionPage = () => {
         </div>
 
         <div className="row d-flex collection">
-          {noteData &&
-            noteData.map((item, index) => {
+          {allData.collectionData &&
+            allData.collectionData.map((item, index) => {
               return (
                 <div
                 key={index}
                   class="card text-box ms-4 mt-3 me-4 col-10 col-lg-5"
-                  style={{ cursor: "pointer" ,backgroundColor:"#ffffcc" }}
+                  style={{ cursor: "pointer" ,backgroundColor:"#F0F8FF" }}
                 >
                   <Link
                     to="notespage"
