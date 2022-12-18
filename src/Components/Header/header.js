@@ -6,11 +6,33 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 import { Link } from 'react-router-dom';
+import { useEffect,useState } from 'react';
 
 import './header.css'
+import { useNavigate } from 'react-router-dom';
+
 
 
 const Header=()=>{
+
+  const [login,setLogin]=useState(false);
+
+  const Navigate=useNavigate();
+useEffect(()=>{
+  if(localStorage.getItem('token')){
+    setLogin(true);
+  }
+  else{
+    Navigate("/login")
+  }
+},[localStorage.getItem('token')])
+
+const logoutHandler=(e)=>{
+  e.preventDefault();
+  localStorage.clear();
+  setLogin(false);
+  Navigate("/login");
+}
 
     return(<>
     <Navbar bg="dark" expand="lg" style={{position:"sticky",display:"flex"}}>
@@ -40,8 +62,12 @@ const Header=()=>{
             
           </Nav>
           <Form className="d-flex">
-          <Link to="/login" className='ms-5 text-white text-decoration-none'>Login</Link>
+
+            {login?<><div className='d-flex justify-content-center row' ><p className='text-white d-flex col-4 mb-0 me-4'><span className='material-icons text-white'>account_circle</span>{localStorage.getItem('email').slice(0,12)}...</p><Link to="/" className='ms-5 mx-0 col-2 text-white text-decoration-none' onClick={logoutHandler}>Logout</Link></div></>:
+            <>
+            <Link to="/login" className='ms-5 text-white text-decoration-none'>Login</Link>
             <Link to="/signup" className='ms-5 text-white text-decoration-none'>Signup</Link>
+          </>}
           </Form>
         </Navbar.Collapse>
       </Container>

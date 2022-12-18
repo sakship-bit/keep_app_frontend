@@ -1,6 +1,6 @@
-import React, { Component, useRef, useState } from "react";
+import React, { useRef, useState ,useContext} from "react";
 import { useLocation } from "react-router-dom";
-
+import NoteContext from "../../context/notecontext";
 
 const NotesPage = () => {
   const noteNameInput = useRef();
@@ -8,6 +8,7 @@ const NotesPage = () => {
   const { from, id } = location.state;
   const notes = from.noteData[id].notes;
   const [add, setAdd] = useState(false);
+  const {DeleteNote,EditNote}=useContext(NoteContext);
   console.log(notes[0].title)
 
   const submitHandler = (e) => {
@@ -17,6 +18,11 @@ const NotesPage = () => {
     notes.push("notes");
   };
 
+  const updateNote=(e)=>{
+    
+  }
+
+ 
   const time = "5:00 am 22 oct";
 
   return (
@@ -60,8 +66,8 @@ const NotesPage = () => {
                       <div className="d-flex align-items-center jutify-content-center">
                       <h5 className="card-title">{item.title}</h5>
                    
-                      <span className="material-icons-outlined ms-5 my-2 align-items-right" style={{"cursor":"pointer"}}>delete</span>
-                     <span className="material-icons-outlined ms-3 my-2 " style={{"cursor":"pointer"}}>edit</span>
+                      <span className="material-icons-outlined ms-5 my-2 align-items-right" style={{"cursor":"pointer"}} onClick={()=>{DeleteNote(index,id,item.id)}}>delete</span>
+                     <span className="material-icons-outlined ms-3 my-2 " style={{"cursor":"pointer"}} onClick={EditNote}>edit</span>
                      </div>
                       <textarea
                       className="form-control  "

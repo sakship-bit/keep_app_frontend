@@ -11,16 +11,19 @@ const NoteState = (props) => {
           title: "my tit",
           description: "this is a description",
           tag: "personal",
+          id:"1"
         },
         {
           title: "my tit",
           description: "this is a description 2",
           tag: "personal",
+          id:"2"
         },
         {
           title: "my tit",
           description: "this is a description 3",
           tag: "personal",
+          id:"3"
         },
       ],
       collection: "collection 1",
@@ -35,16 +38,19 @@ const NoteState = (props) => {
             title: "my tit",
             description: "this is a description",
             tag: "personal",
+            id:"4"
           },
           {
             title: "my tit",
             description: "this is a description 2",
             tag: "personal",
+            id:"5"
           },
           {
             title: "my tit",
             description: "this is a description 3",
             tag: "personal",
+            id:"6"
           },
         ],
         collection: "collection 1",
@@ -54,8 +60,28 @@ const NoteState = (props) => {
   ];
 
   const [collectionData, setCollection] = useState(collectioninitial);
+  
+
+  //add a note
+const AddNote=()=>{
+
+}
+  //delete a note
+const DeleteNote=(e,id,id_note)=>{
+  console.log(collectionData[id].notes[e])
+  
+  //  const newcollection=collectionData[id].notes.filter((note)=>{return note.id!==id_note})
+  // setCollection(newcollection);
+}
+
+  // edit a note
+const EditNote=()=>{
+
+}
+
+
   return (
-    <NoteContext.Provider value={{ collectionData, setCollection }}>
+    <NoteContext.Provider value={{ collectionData, setCollection,AddNote,DeleteNote,EditNote }}>
       {props.children}
     </NoteContext.Provider>
   );
